@@ -9,7 +9,11 @@ public class Calculator {
     }
 
     public static int minus(int y) {
-        return x - y;
+        return y - x;
+    }
+
+    public int multiply(int y) {
+        return x * y;
     }
 
     public double divide(int y) {
@@ -17,19 +21,15 @@ public class Calculator {
     }
 
     public double sumAllOperation(int y) {
-        return sum(y) + minus(y) + divide(y);
+
+        return sum(y) + minus(y) + divide(y) + multiply(y);
     }
 
     public static void main(String[] args) {
-        int sum = Calculator.sum(10);
-        System.out.println(sum);
-        int minus = Calculator.minus(3);
-        System.out.println(minus);
-        Calculator devider = new Calculator();
-        double divide = devider.divide(10);
-        System.out.println(divide);
-        Calculator summator = new Calculator();
-        double sumAll = summator.sumAllOperation(12);
-        System.out.println(sumAll);
+        Calculator casio = new Calculator();
+        System.out.println(casio.sum(10));
+        System.out.println(casio.minus(5));
+        System.out.println(casio.divide(5));
+        System.out.println(casio.sumAllOperation(11));
     }
 }
