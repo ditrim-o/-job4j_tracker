@@ -5,7 +5,6 @@ public class Item {
     private String name;
 
     Item() {
-
     }
 
     Item(String name) {
